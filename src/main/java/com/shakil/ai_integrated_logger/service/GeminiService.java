@@ -28,7 +28,6 @@ public class GeminiService {
     public LogSummaryResponse summarizeLogs(List<LogEntry> logs) throws Exception {
         String prompt = promptBuilder.buildPrompt(logs, objectMapper);
         GenerateContentResponse response = client.models.generateContent("gemini-2.5-flash", prompt, null);
-        System.out.println(response.text());
         return objectMapper.readValue(response.text(), LogSummaryResponse.class);
     }
 }

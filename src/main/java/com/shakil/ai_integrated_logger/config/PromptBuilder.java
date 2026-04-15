@@ -10,7 +10,7 @@ import java.util.List;
 public class PromptBuilder {
     public String buildPrompt(List<LogEntry> logs, ObjectMapper mapper) throws Exception{
         return """
-        You are an expert log analyzer.
+        You are an expert backend reliability engineer.
 
         Analyze the following logs and return ONLY valid JSON.
 
