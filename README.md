@@ -6,7 +6,7 @@ An AI-powered log analysis service built with Spring Boot that summarizes logs, 
 
 ## 📌 Overview
 
-`ai-integrated-logger` is a backend service designed to help developers and DevOps engineers quickly understand application logs. Instead of manually scanning logs, this service uses AI to:
+`ai-integrated-logger` is a backend service designed to help developers and DevOps engineers quickly understand application logs. The codebase is structured using separation of concerns principles in a Spring Boot application, making it easier to navigate and maintain. Instead of manually scanning logs, this service uses AI to:
 
 - Generate concise summaries
 - Identify key error signatures
@@ -62,7 +62,7 @@ POST /summarize-logs
 
 ### Example Request (cURL)
 
-curl --location 'http://localhost:8080/summarize-logs' --header 'Content-Type: application/json' --data '[{"timestamp": "2025-10-15T10:00:05Z","level": "ERROR","service": "payment-service","message": "Database connection timed out after 3001ms"}]'
+curl "http://localhost:8080/summarize-logs" -H "Content-Type: application/json" -d "[{\"timestamp\":\"2025-10-15T10:00:05Z\",\"level\":\"ERROR\",\"service\":\"payment-service\",\"message\":\"Database connection timed out after 3001ms\"}]"
 
 
 ---
